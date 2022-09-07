@@ -56,5 +56,3 @@ function render(num, where) {
 
     }
 }
-window.addEventListener("keypress", function (x) {
-})
