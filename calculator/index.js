@@ -1,4 +1,4 @@
-let num1store = ""
+let numstore = ""
 let symstore = ""
 let x = 0
 let y = 0
@@ -10,7 +10,7 @@ let equalto = document.querySelector(".equalto")
 for (i = 0; i < num.length; i++) {
     let numi = num[i].innerHTML
     num[i].onclick = () => {
-        num1store += numi
+        numstore += numi
         render(numi, "num")
     }
 }
@@ -18,14 +18,14 @@ for (i = 0; i < sym.length; i++) {
     let symi = sym[i].innerHTML
     sym[i].onclick = () => {
         symstore = symi
-        x = parseInt(num1store)
-        num1store = ""
+        x = parseInt(numstore)
+        numstore = ""
         render("", "sym")
     }
 }
 equalto.addEventListener("click", () => {
-    y = parseInt(num1store)
-    num1store = ""
+    y = parseInt(numstore)
+    numstore = ""
     if (symstore == "+") {
         render(x + y, "equals")
     }
